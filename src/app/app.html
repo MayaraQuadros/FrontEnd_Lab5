@@ -8,9 +8,14 @@
 
 <!-- display weather information -->
 <h2>Weather in Galway</h2>
-{{weather[0].main}}, {{weather[0].description}}
+<ul>
+  @for(w of weather; track w){
+  <li>{{w.main}}, {{w.description}}</li>
+  <li>{{temperature}}</li>
+}
+</ul>
 <br>
-{{temperature}}
+
 
 
 
